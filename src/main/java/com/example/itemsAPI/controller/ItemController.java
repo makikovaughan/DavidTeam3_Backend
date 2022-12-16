@@ -37,19 +37,22 @@ public class ItemController {
 
     @CrossOrigin
     @GetMapping("/all")
-    public CollectionModel<EntityModel<Item>> all(){
-        List<EntityModel<Item>> items = itemService.all().stream()
-                .map(assembler::toModel)
-                .collect(Collectors.toList());
+    public List<Item> all(){
 
-        return CollectionModel.of(items, linkTo(methodOn(ItemController.class).all()).withSelfRel());
+        return itemService.all();
+
+//HATEOAS Format
+//        List<EntityModel<Item>> items = itemService.all().stream()
+//                .map(assembler::toModel)
+//                .collect(Collectors.toList());
+//
+//        return CollectionModel.of(items, linkTo(methodOn(ItemController.class).all()).withSelfRel());
     }
 
     @GetMapping("/{id}")
-    public EntityModel<Item> one( @PathVariable Long id ){
-        Item item = itemService.findById(id);
+    public Item one( @PathVariable Long id ){
+       return itemService.findById(id);
 
-        return assembler.toModel(item);
     }
 
     @CrossOrigin
@@ -80,6 +83,7 @@ public class ItemController {
 
         Item updatedItem = itemRepository.findById(id)
                 .map(item -> {
+                    item.setId(id);
                     item.setItemName(newItem.getItemName());
                     item.setProductUrl(newItem.getProductUrl());
                     item.setDescription(newItem.getDescription());
