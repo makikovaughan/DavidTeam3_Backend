@@ -6,12 +6,11 @@ function addItemCard(items) {
 
   let innerhtml = "";
   for (let item of items) {
-    innerhtml += `<div class="col-4 mt-1 "> <div class="card" style="width: 18rem;">
+    innerhtml += `<div class="col-md-4 my-3 "> <div class="card" style="width: 18rem;">
         <img src="${item.productUrl}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">ID: ${item.id} ${item.description}</h5>
 
-          <a href="#" class="btn btn-primary">Add</a>
         </div>
       </div></div>`;
   }
