@@ -6,14 +6,14 @@ This is the backend of GenTee Project.
 
 ### Front-End
 #### src/frontend/build
-index.html: Main page
-item-form.html: Add a new item form
-itemById.html: Search based on the ID.
-product.html: Displays all products dynamically from the DB
-update-form.html: Update the product information
-delete.html: Delete the product.
-about.html: Explains about us
-contact.html: Contact form
+index.html: Main page <br>
+item-form.html: Add a new item form <br>
+itemById.html: Search based on the ID.<br>
+product.html: Displays all products dynamically from the DB. <br>
+update-form.html: Update the product information. <br>
+delete.html: Delete the product.<br>
+about.html: Explains about us. <br>
+contact.html: Contact form. <br>
 
 #### src/frontend/build/JS
 index.js: Main JS file<br>
