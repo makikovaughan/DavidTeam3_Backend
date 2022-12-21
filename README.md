@@ -16,13 +16,13 @@ about.html: Explains about us
 contact.html: Contact form
 
 #### src/frontend/build/JS
-index.js: Main JS file
-delete-item.js: Called when the delete button is clicked
-item-form.js: Called when the submit button is clicked.
-itemById.js: Called when the search button is clicked.
-item.js: Declares all instances.
-update-forms.js: Called when update button is clicked.
-itemController.js: Manage all CRUD operations.
+index.js: Main JS file<br>
+delete-item.js: Called when the delete button is clicked. <br>
+item-form.js: Called when the submit button is clicked. <br>
+itemById.js: Called when the search button is clicked.<br>
+item.js: Declares all instances.<br>
+update-forms.js: Called when update button is clicked. <br>
+itemController.js: Manage all CRUD operations.<br>
 
 ### Back-End
 controller/dto/ItemDto.java - This class is for the Data Transfer Objects used to map the JSON data structure sent and received by the REST controller.
